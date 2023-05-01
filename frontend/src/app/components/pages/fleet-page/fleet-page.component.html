@@ -1,0 +1,23 @@
+
+<div class="search ms-5">
+  <app-search [page]="page"></app-search>
+</div>
+<div class="container-fluid mt-5">
+  <h1 class="mt-3 mb-3 text-center">GABS Fleets</h1>
+    <ul class="ul d-flex justify-content-center align-items-center flex-wrap">
+        <li *ngFor="let fleet of fleets">
+            <div class="card" style="width: 18rem;">
+                <img [src]="fleet.image" class="card-img-top" [alt]="fleet.fleetNumber">
+                <div class="card-body justify-content-center">
+                  <h5 class="card-title fw-bold">Fleet: {{fleet.fleetNumber}}</h5>
+                  <ul class="list-group">
+                    <li class="list-group-item fw-semibold bg-transparent">Depot: {{fleet.depot}}</li>
+                    <li class="list-group-item fw-semibold bg-transparent">Last Checked: {{fleet.dateCheck}}</li>
+                    <li class="list-group-item fw-semibold bg-transparent">No Maintainance: {{fleet.numberOfMaintaince}}</li>
+                  </ul>
+                  <a routerLink="/record-page/{{fleet.fleetNumber}}" class="btn btn-success fw-semibold">Record</a>
+                </div>
+              </div>
+        </li>
+    </ul>
+</div>

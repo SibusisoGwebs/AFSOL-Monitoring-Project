@@ -1,0 +1,74 @@
+<section>
+    <h1 class="mt-5 text-center">Golden Arrow Monitoring</h1>
+    <form class="container p-5 fw-semibold" [formGroup]="monitorForm" (ngSubmit)="onSubmit()">
+        <div class="row mt-3">
+            <div class="col">
+                <img class="mt-5 ms-4 rounded" src="assets/GABS_Bus.jpg" alt="fleet.name" width="280" height="230">
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input class="form-control fw-semibold bg-transparent" aria-label="Default select example" id="name" formControlName="name" readonly>
+                  </div>
+                  <div class="mb-3">
+                    <label for="fleet" class="form-label">Fleet No</label>
+                    <input type="text" class="form-control fw-semibold bg-transparent" id="fleet" formControlName="fleetFleetNumber" readonly>
+                  </div>
+                  <div class="mb-3">
+                      <label for="Status" class="form-label">Status</label>
+                      <select class="form-select fw-semibold bg-transparent" aria-label="Default select example" id="Status" formControlName="status">
+                          <option class="bg" value="Online">Online</option>
+                          <option class="bg" value="Maintainance">Maintainance</option>
+                          <option class="bg" value="Offline">Offline</option>
+                      </select>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="Priority" class="form-label">Priority</label>
+                    <select class="form-select fw-semibold bg-transparent" aria-label="Default select example" id="Priority" formControlName="priority">
+                        <option class="bg" value="Low">Low</option>
+                        <option class="bg" value="Medium">Medium</option>
+                        <option class="bg" value="High">High</option>
+                        <option class="bg" value="None">None</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="Description" class="form-label">Description</label>
+                    <select class="form-select fw-semibold bg-transparent" aria-label="Default select example" id="Description" formControlName="description">
+                        <option class="bg" value="L1(LPR Offline)">L1(LPR Offline)</option>
+                        <option class="bg" value="L2(LPR adjustment)">L2(LPR adjustment)</option>
+                        <option class="bg" value="L3(LPR colour adjustment)">L3(LPR colour adjustment)</option>
+                        <option class="bg" value="S1(Saloon Offline)">S1(Saloon Offline)</option>
+                        <option class="bg" value="S2(Saloon adjustment)">S2(Saloon adjustment)</option>
+                        <option class="bg" value="S3(Saloon colour adjustment)">S3(Saloon colour adjustment)</option>
+                        <option class="bg" value="E1(Entrance offline)">E1(Entrance offline)</option>
+                        <option class="bg" value="E2(Entrance adjustment)">E2(Entrance adjustment)</option>
+                        <option class="bg" value="E3(Entrance colour adjustment)">E3(Entrance colour adjustment)</option>
+                        <option class="bg" value="SH1(SH install)">SH1(SH install)</option>
+                        <option class="bg" value="SH2(SH reinstall-offline>5days)">SH2(SH reinstall-offline>5days)</option>
+                        <option class="bg" value="REC1(No Recordings)">REC1(No Recordings)</option>
+                        <option class="bg" value="Full health check">Full health check</option>
+                        <option class="bg" value="Offline(less 24hrs)">Offline(less 24hrs)</option>
+                        <option class="bg" value="Offline(less 5days)">Offline(less 5days)</option>
+                        <option class="bg" value="Offline(Laid up)">Offline(Laid up)</option>
+                        <option class="bg" value="Other">Other</option>
+                    </select>
+                </div>
+                <!-- <div class="mb-3">
+                    <label for="Depot" class="form-label text-light">Depot</label>
+                    <input type="text" class="form-control fw-semibold bg-transparent" id="Depot" formControlName="depot">
+                </div> -->
+                <!-- <div class="mb-3">
+                    <label for="Date" class="form-label text-light">Date</label>
+                    <input type="text" class="form-control fw-semibold bg-transparent" id="Date" formControlName="datecheck">
+                </div> -->
+                <div class="mb-3">
+                    <label for="Comment" class="form-label">Comment</label>
+                    <input type="text" class="form-control fw-semibold bg-transparent" id="Comment" formControlName="comment">
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success mt-2 mb-3 fw-semibold">Submit</button>
+      </form>
+</section>

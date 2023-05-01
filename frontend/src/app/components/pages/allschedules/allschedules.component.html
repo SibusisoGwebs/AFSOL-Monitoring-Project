@@ -1,0 +1,28 @@
+<section>
+    <h1 class="text-center mb-4">Scheduled Fleet</h1>
+      <table class="container table table-bordered" *ngFor="let schedule of allSchedulesDates">
+            <thead class="table-group-divider fw-bold fs-5">
+                <tr>
+                    <th class="text-center" colspan="6">{{schedule.date}}</th>
+                </tr>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Fleet</th>
+                    <th scope="col">Depot</th>
+                    <th scope="col">Priority</th>
+                    <th scope="col">Issue</th>
+                    <th scope="col">Date Checked</th>
+                </tr>
+            </thead>
+            <tbody class="fw-semibold" *ngFor="let scheduledFleet of allScheduledFleet">
+                <tr *ngIf="scheduledFleet.schedule.date === schedule.date">
+                    <td>{{scheduledFleet.name}}</td>
+                    <td>{{scheduledFleet.fleetFleetNumber}}</td>
+                    <td>{{scheduledFleet.fleet.depot}}</td>
+                    <td>{{scheduledFleet.status}}</td>
+                    <td>{{scheduledFleet.description}}</td>
+                    <td>{{scheduledFleet.datecheck}}</td>
+                </tr>
+            </tbody>
+      </table>
+</section>

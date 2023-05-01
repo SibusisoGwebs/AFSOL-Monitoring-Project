@@ -1,0 +1,72 @@
+.container-fluid{
+    padding-bottom: 40rem;
+}
+
+// h1{
+//     color: #00467F;
+// }
+
+h5{
+    color: #8f4203;
+}
+
+.ul{
+    list-style-type: none;
+    padding: 0;
+    background-color: linear-gradient(130deg, #1e7260, #050535);
+    margin: 0.5rem;
+    border-radius: 1rem;
+}
+
+.card{
+    width: 75rem;
+    // border: 2px solid #00467F;
+    // color: #00467F;
+    // border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    // background-image: linear-gradient(130deg, #1f997f, #688f45, #A5CC82);
+    // opacity: 0.8;
+}
+
+// .card:hover{
+//     opacity: 1;
+//     box-shadow: 2px 2px 2px 2px #28e0a3;
+// }
+
+// .row{
+//   border: 1px solid #00467F
+// }
+// .col-3{
+//   border: 1px solid #00467F
+// }
+
+.book{
+  border: 1px solid #00467F
+}
+
+.list-group{
+    margin-bottom: 0.5rem;
+}
+
+.list-group-item{
+    color: #dedede;
+}
+
+// a:hover{
+//     cursor: pointer;
+// }
+
+.book:hover{
+    background: #0374a8;
+}
+.remove{
+    color: #ff0000;
+}
+.remove:hover{
+    background: #d62c2c;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}

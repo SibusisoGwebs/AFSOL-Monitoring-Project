@@ -1,0 +1,29 @@
+<section>
+    <h1 class="text-center">Add User</h1>
+    <form class="container fw-semibold w-50" [formGroup]="UserForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="names" class="form-label">Name</label>
+          <input type="text" class="form-control fw-semibold bg-transparent" formControlName="name" id="names">
+        </div>
+        <div class="mb-3">
+          <label for="emails" class="form-label">Email</label>
+          <input type="text" class="form-control fw-semibold bg-transparent" formControlName="email" id="emails">
+        </div>
+        <div class="mb-3">
+          <label for="pass1" class="form-label">Create Password</label>
+          <input type="password" class="form-control fw-semibold bg-transparent" formControlName="passwords" id="pass1">
+        </div>
+        <div class="mb-3">
+          <label for="pass2" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control fw-semibold bg-transparent" formControlName="confirmPasswords" id="pass2">
+        </div>
+        <div class="mb-3">
+          <label for="admin" class="form-label">IsAdmin</label>
+          <select class="form-select fw-semibold bg-transparent" formControlName="isAdmin" id="admin">
+            <option selected>false</option>
+            <option>true</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary fw-semibold">Submit</button>
+      </form>
+</section>

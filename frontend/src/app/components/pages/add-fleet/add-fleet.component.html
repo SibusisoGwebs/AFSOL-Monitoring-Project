@@ -1,0 +1,14 @@
+<section>
+    <h1 class="text-center">Add Fleet</h1>
+    <form class="container fw-semibold w-50" [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="fleet" class="form-label">Fleet Number</label>
+          <input type="text" class="form-control fw-semibold bg-transparent" formControlName="fleetNumber" id="fleet">
+        </div>
+        <div class="mb-3">
+          <label for="depot" class="form-label">Depot</label>
+          <input type="text" class="form-control fw-semibold bg-transparent" formControlName="depot" id="depot">
+        </div>
+        <button type="submit" class="btn btn-primary fw-semibold">Submit</button>
+      </form>
+</section>

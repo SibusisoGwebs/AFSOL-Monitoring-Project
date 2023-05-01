@@ -1,0 +1,44 @@
+<section class="container mt-4" *ngIf="user.name">
+    <ul class="ul d-flex flex-row justify-content-between align-items-center flex-wrap">
+            <li>
+                <a role="button" class="card" style="width: 10rem;" routerLink="/fleets">
+                    <div class="card-body">
+                        <h1 class="card-title fw-bold text-center">{{totalOnline.count}}</h1>
+                        <h6 class="card-subtitle mb-2 text-center">{{totalOnline.name}}</h6>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a role="button" class="card" style="width: 10rem;" routerLink="/fleets">
+                    <div class="card-body">
+                        <h1 class="card-title fw-bold text-center">{{totalOffline.count}}</h1>
+                        <h6 class="card-subtitle mb-2 text-center">{{totalOffline.name}}</h6>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a role="button" class="card" style="width: 10rem;" routerLink="/fleet-maintainance-list">
+                    <div class="card-body">
+                        <h1 class="card-title fw-bold text-center">{{totalMaintainance.count}}</h1>
+                        <h6 class="card-subtitle mb-2 text-center">{{totalMaintainance.name}}</h6>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a role="button" class="card" style="width: 10rem;" routerLink="/fleet-page">
+                    <div class="card-body">
+                        <h1 class="card-title fw-bold text-center">{{totalCompleted.count}}</h1>
+                        <h6 class="card-subtitle mb-2 text-center">{{totalCompleted.name}}</h6>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a role="button" class="card" style="width: 10rem;" routerLink="/All-Schedules">
+                    <div class="card-body">
+                        <h1 class="card-title fw-bold text-center">{{totalOutstanding.count}}</h1>
+                        <h6 class="card-subtitle mb-2 text-center">{{totalOutstanding.name}}</h6>
+                    </div>
+                </a>
+            </li>
+    </ul>
+</section>

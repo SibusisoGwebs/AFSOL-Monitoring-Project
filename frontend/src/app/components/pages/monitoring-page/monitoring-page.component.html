@@ -1,0 +1,23 @@
+<div class="container-fluid mt-5">
+    <div class="ms-5">
+      <app-search [page]="page"></app-search>
+    </div>
+    <h1 class="mt-5 mb-5 text-center">GABS Maintainance History</h1>
+    <ul class="ul d-flex justify-content-center align-items-center flex-wrap">
+        <li *ngFor="let fleet of maintainanceList">
+            <div class="card" style="width: 18rem; height: 20rem;">
+                <!-- <img [src]="fleet.imageUrl" class="card-img-top" [alt]="fleet.name"> -->
+                <div class="card-body justify-content-center">
+                  <h5 class="card-title fw-bold">Fleet: {{fleet.fleetFleetNumber}}</h5>
+                  <ul class="list-group">
+                    <li class="list-group-item fw-semibold bg-transparent">Depot: {{fleet.depot}}</li>
+                    <li class="list-group-item fw-semibold bg-transparent">Checked: {{fleet.datecheck}}</li>
+                    <li class="list-group-item fw-semibold bg-transparent" style="height: 4rem;">Problem: {{fleet.description}}</li>
+                    <li class="list-group-item fw-semibold bg-transparent" style="height: 5rem;">Commemnt: {{fleet.comment}}</li>
+                  </ul>
+                  <!-- <a routerLink="/record-page/{{fleet.fleetNumber}}" class="btn btn-danger fw-semibold">Remove</a> -->
+                </div>
+              </div>
+        </li>
+    </ul>
+</div>

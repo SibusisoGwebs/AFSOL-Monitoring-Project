@@ -1,0 +1,22 @@
+<section>
+    <h1 class="text-center">Login</h1>
+    <form class="container fw-semibold w-50" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="email_" class="form-label">Email</label>
+          <input type="email" class="form-control fw-semibold bg-transparent" formControlName="Email" id="email_">
+
+          <div class="text-warning fw-bold bg-danger mt-1 rounded" *ngIf="loginForm.controls.Email.errors && isSubmitted">
+            <div class="text-warning fw-semibold" *ngIf="loginForm.controls.Email.errors.required">Should not be empty</div>
+            <div *ngIf="loginForm.controls.Email.errors.email">Email is incorrect</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="depot" class="form-label">Password</label>
+          <input type="password" class="form-control fw-semibold bg-transparent" formControlName="Password" id="depot">
+          <div class="text-warning fw-bold bg-danger mt-1 rounded" *ngIf="loginForm.controls.Password.errors && isSubmitted">
+            <div class="fw-bold" *ngIf="loginForm.controls.Password.errors.required">Should not be empty</div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success fw-semibold">Submit</button>
+      </form>
+</section>

@@ -1,0 +1,43 @@
+<div class="container-fluid mt-5">
+    <h1 class="mt-5 mb-5 text-center">GABS Maintainance</h1>
+    <ul class="ul d-flex justify-content-center align-items-center flex-wrap">
+        <li *ngFor="let fleeet of maintainanceFleetList">
+            <div class="card ps-2 pb-1 pe-2">
+                <!-- <img [src]="fleet.imageUrl" class="card-img-top" [alt]="fleet.name"> -->
+                <div class="card-body justify-content-center">
+                  <h5 class="card-title fw-bold text-center">Fleet: {{fleeet.fleetFleetNumber}}</h5>
+                  <div class="row rounded">
+                    <div class="col-3 d-flex flex-column fw-semibold bg-transparent">
+                      <span class="fw-bold">Depot:</span>
+                      <span>{{fleeet.fleet.depot}}</span>
+                    </div>
+                    <div class="col-3 d-flex flex-column fw-semibold bg-transparent">
+                      <span class="fw-bold">Date:</span>
+                      <span>{{fleeet.datecheck}}</span>
+                    </div>
+                    <div class="col-3 d-flex flex-column fw-semibold bg-transparent">
+                      <span class="fw-bold">Commemnt:</span>
+                      <span>{{fleeet.comment}}</span>
+                    </div>
+                    <a class="book col d-flex flex-column fw-bold fs-3 text-center text-primary"
+                    routerLink="/booking-page/{{fleeet.fleetFleetNumber}}">
+                      Book
+                    </a>
+                    <a class="remove col d-flex flex-column fw-bold fs-3 text-center"
+                    routerLink="/remove-page/{{fleeet.fleetFleetNumber}}">
+                      Close
+                    </a>
+                  </div>
+
+
+                  <!-- <ul class=" d-flex flex-row">
+                    <li class=" fw-semibold bg-transparent">Depot: {{fleet.depot}}</li>
+                    <li class="fw-semibold bg-transparent">Last Checked: {{fleet.datecheck}}</li>
+                    <li class="fw-semibold bg-transparent">Commemnt: {{fleet.comment}}</li>
+                  </ul> -->
+                  <!-- <a routerLink="/remove-page/{{fleet.fleetFleetNumber}}" class="btn btn-danger fw-semibold">Remove</a> -->
+                </div>
+              </div>
+        </li>
+    </ul>
+</div>

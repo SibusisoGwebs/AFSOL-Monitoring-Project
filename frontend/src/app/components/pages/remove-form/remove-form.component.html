@@ -1,0 +1,24 @@
+<section>
+    <h1 class="text-center">Closing Maintainance</h1>
+    <form class="container fw-semibold w-50" [formGroup]="removeForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="tech" class="form-label">Tech Name</label>
+          <input type="text" class="form-control fw-semibold bg-transparent" formControlName="techname" id="tech">
+        </div>
+        <div class="mb-3">
+            <label for="fleet" class="form-label">Fleet No</label>
+            <input type="text" class="form-control fw-semibold bg-transparent" formControlName="fleetFleetNumber" id="fleet">
+        </div>
+        <div class="mb-3">
+          <label for="resol" class="form-label">Resolution</label>
+          <input type="text" class="form-control fw-semibold bg-transparent" formControlName="resolution" id="resol">
+        </div>
+        <div class="mb-3">
+            <label for="ticket" class="form-label">Ticket</label>
+            <input type="text" class="form-control fw-semibold bg-transparent" formControlName="ticket" id="ticket">
+          </div>
+        <button (click)="onClicking()" *ngIf="removeForm.get('techname')?.valid && removeForm.get('resolution')?.valid && removeForm.get('ticket')?.valid && !showButton"
+        type="button" class="btn fw-semibold">Add</button>
+        <button *ngIf="showButton" type="submit" class="remove btn btn-danger fw-semibold">Close</button>
+      </form>
+</section>

@@ -1,0 +1,23 @@
+<section>
+    <div class="card text-center w-50 mt-5">
+        <div class="card-header">
+          <h2>{{maintainedFleet.technicianTicket}}</h2>
+        </div>
+        <div class="card-body">
+            <h2>{{maintainedFleet.technician.fleetFleetNumber}}</h2>
+            <h3>Name: {{maintainedFleet.name}}</h3>
+            <h4>Priority: {{maintainedFleet.priority}}</h4>
+            <h4>Issue: {{maintainedFleet.description}}</h4>
+            <h4>Date Check: {{maintainedFleet.datecheck}}</h4>
+            <h5>Comment: {{maintainedFleet.comment}}</h5>
+            <hr>
+            <h3>Tech Name: {{maintainedFleet.technician.techname}}</h3>
+            <h4>Resolution: {{maintainedFleet.priority}}</h4>
+            <h4>Date: {{maintainedFleet.priority}}</h4>
+            <a class="btn btn-warning mt-2 mb-2" routerLink="/History-Maintainance">Go Back</a>
+        </div>
+        <div class="card-footer text-muted">
+          2 days ago
+        </div>
+      </div>
+</section>

@@ -1,0 +1,59 @@
+<section>
+    <h1 class="mt-5 text-center">Video Footage</h1>
+    <h3 class="mt-5 text-center">Closing Ticket: {{videoTicket}}</h3>
+    <form class="container p-5 fw-semibold" [formGroup]="closingVideoFootageForm" (ngSubmit)="onSubmit()">
+        <div class="row mt-3">
+            <!-- <div class="col">
+                <img class="mt-5 ms-4 rounded" src="assets/GABS_Bus.jpg" alt="fleet.name" width="280" height="230">
+            </div> -->
+            <div class="col">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Technician</label>
+                    <input type="text" class="form-control fw-semibold bg-transparent" id="name" formControlName="techname">
+                  </div>
+                  <div class="mb-3">
+                    <label for="fleet" class="form-label">Depot</label>
+                    <input type="text" class="form-control fw-semibold bg-transparent" id="fleet" formControlName="depot">
+                  </div>
+                  <div class="mb-3">
+                      <label for="ref" class="form-label">Ref Number</label>
+                      <input type="text" class="form-control fw-semibold bg-transparent" id="ref" formControlName="refNumber">
+                  </div>
+                  <div class="mb-3">
+                    <label for="date" class="form-label">Date and Time</label>
+                    <input type="datetime-local" class="form-control fw-semibold bg-transparent" id="date" formControlName="dateAndTime">
+                  </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="Description" class="form-label">Was the required information available?</label>
+                    <select class="form-select fw-semibold bg-transparent" aria-label="Default select example" id="Description" formControlName="available">
+                        <option class="bg" value="L1(LPR Offline)">Yes</option>
+                        <option class="bg" value="L2(LPR adjustment)">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="download" class="form-label">Did you successfully download the information?</label>
+                    <select class="form-select fw-semibold bg-transparent" aria-label="Default select example" id="download" formControlName="downloadSuccess">
+                      <option class="bg" value="L1(LPR Offline)">Yes</option>
+                      <option class="bg" value="L2(LPR adjustment)">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="handed" class="form-label">Was the footage handed over to the client of investigating officcer?</label>
+                    <select class="form-select fw-semibold bg-transparent" aria-label="Default select example" id="handed" formControlName="delivered">
+                      <option class="bg" value="L1(LPR Offline)">Yes</option>
+                      <option class="bg" value="L2(LPR adjustment)">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="Comment" class="form-label">How was the footage handed over?</label>
+                    <input type="text" class="form-control fw-semibold bg-transparent" id="Comment" formControlName="formOfDelivery">
+                </div>
+            </div>
+        </div>
+        <button type="button" (click)="onClick()" class="add btn fw-semibold">Add</button>
+        <button type="submit" *ngIf="showButton" class="remove btn btn-danger mt-3 fw-semibold">Submit</button>
+        <!-- <button *ngIf="showButton" class="remove btn btn-danger fw-semibold">Close</button> -->
+      </form>
+</section>

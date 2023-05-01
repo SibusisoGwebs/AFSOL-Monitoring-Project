@@ -1,0 +1,18 @@
+<div class="container d-flex mt-5">
+    <input class="form-control w-25 fw-semibold fs-5" 
+    #s type="text"
+    placeholder="search fleet"
+    (keyup.enter)="onPage(s.value)"
+    [value]="searchTerm"/>
+    <button *ngIf="page === 'fleet'" class="btn btn-success fw-semibold fs-5" (click)="onPage(s.value)">Search</button>
+    <button *ngIf="page === 'monitoring'" class="btn btn-primary fw-semibold fs-5" (click)="onPage(s.value)">Search</button>
+</div>
+<!-- <div *ngIf="page === 'monitoring'" class="container d-flex mt-5">
+    <input class="form-control w-25 fw-semibold fs-5" 
+    #s type="text"
+    placeholder="search fleet"
+    (keyup.enter)="searchMaintain(s.value)"
+    [value]="searchTerm"/>
+    <button *ngIf="page === 'fleet'" class="btn btn-success fw-semibold fs-5" (click)="search(s.value)">Search</button>
+    <button *ngIf="page === 'monitoring'" class="btn btn-primary fw-semibold fs-5" (click)="searchMaintain(s.value)">Search</button>
+</div> -->

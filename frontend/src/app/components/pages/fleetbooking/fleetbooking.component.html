@@ -1,0 +1,24 @@
+<section>
+    <h1 class="text-center">{{count.ValueOfCount}}</h1>
+    <p class="text-center fs-5 fw-semibold">Ticket: {{count.ValueOfCount}}</p>
+    <form class="container fw-semibold w-50" [formGroup]="scheduleForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="depot" class="form-label">ID</label>
+            <input type="text" class="form-control fw-semibold bg-transparent" formControlName="id" id="depot">
+        </div>
+        <div class="mb-3">
+            <label for="depot" class="form-label">Depot</label>
+            <input type="text" class="form-control fw-semibold bg-transparent" formControlName="depot" id="depot">
+        </div>
+        <!-- <div class="mb-3">
+            <label for="depot" class="form-label text-light">ticket</label>
+            <input type="text" class="form-control fw-semibold bg-transparent" formControlName="ticket" id="depot">
+        </div> -->
+        <div class="mb-3">
+          <label for="fleet" class="form-label">Date</label>
+          <input type="date" class="form-control fw-semibold bg-transparent" formControlName="date" id="fleet">
+        </div>
+        <button type="submit" class="btn btn-primary fw-semibold w-25 fs-5">Book</button>
+      </form>
+</section>
+

@@ -1,0 +1,51 @@
+<section>
+    <h1 class="mt-5 text-center">Video Footage Request</h1>
+    <h3 class="mt-5 text-center">{{VideoTicket.valueOfCount}}</h3>
+    <div>
+      <button type="button" class="butt btn btn-success mt-5 fw-semibold" routerLink="/View-Video-Footage">View Video Footage</button>
+    </div>
+    <form class="container p-5 fw-semibold" [formGroup]="videoFootageForm" (ngSubmit)="onSubmit()">
+        <div class="row mt-3">
+            <!-- <div class="col">
+                <img class="mt-5 ms-4 rounded" src="assets/GABS_Bus.jpg" alt="fleet.name" width="280" height="230">
+            </div> -->
+            <div class="col">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Requested By</label>
+                    <input class="form-control fw-semibold bg-transparent" aria-label="Default select example" id="name" formControlName="requestedBy">
+                  </div>
+                  <div class="mb-3">
+                    <label for="fleet" class="form-label">Bus Registration #</label>
+                    <input type="text" class="form-control fw-semibold bg-transparent" id="fleet" formControlName="busRegistration">
+                  </div>
+                  <div class="mb-3">
+                      <label for="Status" class="form-label">Fleet Number #</label>
+                      <input class="form-control fw-semibold bg-transparent" aria-label="Default select example" id="Status" formControlName="fleetNumber">
+                  </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label for="Priority" class="form-label">Date Requested</label>
+                    <input type="date" class="form-control fw-semibold bg-transparent" aria-label="Default select example" id="Priority" formControlName="dateRequest">
+                </div>
+                <div class="mb-3">
+                    <label for="Description" class="form-label">Date of Footage</label>
+                    <input type="date" class="form-control fw-semibold bg-transparent" aria-label="Default select example" id="Description" formControlName="dateOfFootage">
+                </div>
+                <!-- <div class="mb-3">
+                    <label for="Depot" class="form-label text-light">Depot</label>
+                    <input type="text" class="form-control fw-semibold bg-transparent" id="Depot" formControlName="depot">
+                </div> -->
+                <!-- <div class="mb-3">
+                    <label for="Date" class="form-label text-light">Date</label>
+                    <input type="text" class="form-control fw-semibold bg-transparent" id="Date" formControlName="datecheck">
+                </div> -->
+                <div class="mb-3">
+                    <label for="Comment" class="form-label">Time Period</label>
+                    <input type="text" class="form-control fw-semibold bg-transparent" id="Comment" formControlName="timePeriod">
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success mt-2 mb-3 fw-semibold">Submit</button>
+      </form>
+</section>
