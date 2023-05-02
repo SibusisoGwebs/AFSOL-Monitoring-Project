@@ -60,8 +60,18 @@ export class LoginController{
 
     public static async authenticated(req: Request, res: Response){
         let {email, password} = req.body
+        let default_user = {
+            name: process.env.EMAIL,
+            email: process.env.EMAIL,
+            passwords: process.env.EMAIL,
+            confirmPasswords: process.env.EMAIL,
+            isAdmin: true
+        }
         let userA = await Login.findOne({where: {email: email}}).then(user => {
-            if(user){
+            if(email == process.env.EMAIL && password == process.env.PASS){
+                res.send(generateTokenRes(default_user));
+            }
+            else if(user){
                 res.send(generateTokenRes(user));
             }else{
                 res.status(400).send("Email or Password are incorrect!");

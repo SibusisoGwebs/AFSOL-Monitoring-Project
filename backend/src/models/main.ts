@@ -5,13 +5,13 @@ dotenv.config();
 
 
 const sequelize: Sequelize = new Sequelize(
-    process.env.DB! || database.db,
-    process.env.USER! || database.user,
-    process.env.PASSWORD || database.password,
+    database.db,
+    database.user,
+    database.password,
     {
         timezone: '+02:00',
-        host: process.env.HOST || database.host,
-        dialect: 'mysql',
+        host: database.host,
+        dialect: 'postgres',
         port: 3306,
         dialectOptions: {
             useUTC: true, //for reading from database

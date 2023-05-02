@@ -1,9 +1,12 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 export const database = {
-    host: 'eu-cdbr-west-03.cleardb.net',
-    user: 'b4c274b10602c4',
-    password: '3bee2234',
-    db: 'heroku_912c958da53c082',
-    dialect: 'mysql',
+    host: process.env.HOST1 || 'eu-cdbr-west-03.cleardb.net',
+    user: process.env.USER1 || 'b4c274b10602c4',
+    password: process.env.PASSWORD1 || '3bee2234',
+    db: process.env.DB1 || 'heroku_912c958da53c082',
+    dialect: process.env.DIALECT1 || 'mysql',
     dialectOptions: {
         useUTC: false,
     },
