@@ -1,6 +1,6 @@
 import { environment } from "src/environments/environment";
 
-const BASE_URL = environment.production? "" : "http://localhost:5000/bureau/";
+const BASE_URL = environment.production? ""+"/bureau/" : "http://localhost:5000/bureau/";
 
 export const POST_FLEET = BASE_URL + 'fleet/post';
 export const FETCH_ALL_FLEET = BASE_URL + 'fleet/fetchall';
