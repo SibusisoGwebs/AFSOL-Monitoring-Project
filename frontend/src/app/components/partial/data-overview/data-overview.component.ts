@@ -9,11 +9,11 @@ import { User } from 'src/app/shared/user.model';
   styleUrls: ['./data-overview.component.scss']
 })
 export class DataOverviewComponent {
-  totalMaintainance: CountModel = {count: 200, name: 'Maintainance'};
-  totalCompleted: CountModel = {count: 50, name: 'Completed'};
-  totalOutstanding: CountModel = {count: 20, name: 'Outstanding'};
-  totalOnline: CountModel = {count: 674, name: 'Online'};
-  totalOffline: CountModel = {count: 350, name: 'Offline'};
+  totalMaintainance: CountModel = {count: 0, name: '--'};
+  totalCompleted: CountModel = {count: 0, name: '--'};
+  totalOutstanding: CountModel = {count: 0, name: '--'};
+  totalOnline: CountModel = {count: 0, name: '--'};
+  totalOffline: CountModel = {count: 0, name: '--'};
 
   user!: User;
 
