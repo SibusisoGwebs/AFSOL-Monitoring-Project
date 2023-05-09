@@ -42,7 +42,7 @@
           </li>
         </ul>
         <div class="name  d-flex text-light fw-semibold">
-          <span>{{user.name}}</span>
+          <span>{{user.name | storten}}</span>
           <i class="bi bi-person-circle ms-2 me-3" style="font-size: 1.5rem; color: #20252b;" type="button"></i>
           <i class="bi bi-box-arrow-right" type="button" style="font-size: 1.5rem; color: #20252b;" (click)="authService.logOut()" routerLink="/"></i>
           <span style="color: #af0202; font-size: 0.8rem">{{status}}</span>
