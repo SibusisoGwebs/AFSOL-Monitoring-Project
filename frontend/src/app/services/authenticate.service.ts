@@ -76,4 +76,10 @@ export class AuthenticateService {
     // return this.unAuthenticated();
     // this.router.navigate(['']);
   }
+
+  removeHeader(value: string){
+    if(value){
+      localStorage.removeItem(USER_KEY);
+    }
+  }
 }

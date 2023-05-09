@@ -16,14 +16,14 @@ export class LoginComponent {
   isSubmitted: boolean = false;
 
   constructor(private authService: AuthenticateService, private router: Router){
-
+    this.authService.removeHeader(this.router.url)
   }
 
 
   onSubmit(){
     this.isSubmitted = true
 
-    this.authService.login({email: this.loginForm.controls.Email.value, 
+    this.authService.login({email: this.loginForm.controls.Email.value,
       password: this.loginForm.controls.Password.value}).subscribe(() => {
         this.router.navigateByUrl('/home')
       })
