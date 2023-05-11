@@ -1,6 +1,9 @@
 <app-header></app-header>
 <section>
-    <h1 class="text-center">Closing Maintainance</h1>
+  <div class="d-flex text-center">
+    <app-back-button routerLink="/{{username}}/fleet-maintainance-list"></app-back-button>
+  </div>
+  <h1 class="text-center">Closing Maintainance</h1>
     <form class="container fw-semibold w-50" [formGroup]="removeForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
           <label for="tech" class="form-label">Tech Name</label>

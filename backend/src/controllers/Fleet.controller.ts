@@ -16,7 +16,8 @@ export class FleetController{
     }
 
     public static async reveal(req: Request, res: Response){
-        let fleets = await Fleet.findAll().then(fleets => {
+        let Depot = req.params.depot;
+        let fleets = await Fleet.findAll({where: {depot: Depot}}).then(fleets => {
            return res.json(fleets);
         }).catch(err => {
            return res.status(500).send(err.message)

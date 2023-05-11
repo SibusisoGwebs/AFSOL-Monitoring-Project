@@ -1,0 +1,51 @@
+section{
+  height: 85vh;
+}
+
+h1{
+  color: #00467F;
+  margin-top: 2rem;
+}
+
+.container{
+  margin-top: 3%;
+}
+
+form{
+  // border: 2px solid #00467F;
+  // border-radius: 1rem;
+  padding: 2rem;
+  // background-image: linear-gradient(130deg, #1e7260, #A5CC82);
+
+}
+
+.form-label{
+color: #2c3e50;
+}
+
+.form-control{
+border: 2px solid #2c3e50;
+}
+
+.btn{
+  width: 8rem;
+  margin-left: 40%;
+  // border: 1px solid #A5CC82;
+  // color: #A5CC82;
+  // background-image: linear-gradient(130deg, #1e7260, #0f2988);
+}
+
+.butt{
+  width: 10rem;
+  margin-left: 45%;
+  border: 1px solid #2c3e50;
+  color: #2c3e50;
+  background-image: linear-gradient(130deg, #2980b9, #ffffff, #2c3e50);
+  opacity: 0.8;
+}
+
+
+.butt:hover{
+  opacity: 1;
+}
+

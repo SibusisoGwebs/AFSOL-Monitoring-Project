@@ -14,12 +14,13 @@ import Maintain from "../models/maintain.model";
 import { VideoFootageController } from "../controllers/videoFootage.controller";
 import Login from "../models/logins.model";
 import { VideoFootageHistoryController } from "../controllers/VideoFootageHistory.controller";
+import { MonitorsController } from "../controllers/Monitors.controller";
 
 const router: Router = Router();
 
 //Fleet Routes
 router.post('/fleet/post', FleetController.create);
-router.get('/fleet/fetchall', FleetController.reveal);
+router.get('/fleet/fetchall/:depot', FleetController.reveal);
 router.get('/fleet/fetchone/:fleetNo', FleetController.revealOne);
 router.put('/fleet/update/:fleetNo', FleetController.alter);
 router.delete('/fleet/delete/:fleetNo', FleetController.remove);
@@ -54,7 +55,7 @@ router.get('/maintainance/fetchall', MaintainController.reveal);
 router.get('/maintainance/fetchone/:fleetNumber', MaintainController.revealOne);
 router.put('/maintainance/update/:fleetNumber', MaintainController.alter);
 router.delete('/maintainance/delete/:fleetNumber', MaintainController.remove);
-router.get('/maintainance/fetchallFleet', MaintainController.revealWithFleet);
+router.get('/maintainance/fetchallFleet/:depot', MaintainController.revealWithFleet);
 router.get('/maintainance/fetchoneFleet/:fleetNumber', MaintainController.revealOneFleet);
 router.get('/maintainance/fetchone-scheduledFleet/:fleetNumber', MaintainController.OneFleetAndSchedule);
 router.get('/maintainance/fetchAll-scheduledFleet', MaintainController.AllScheduledFleet);
@@ -124,4 +125,10 @@ router.delete('/video-footage/delete/:ticket', VideoFootageController.remove);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////LogIn///////////////////////////////////////////////////////
 router.post('/login-page', LoginController.authenticated)
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////Monitors////////////////////////////////////////////////////
+router.delete('/monitors/delete', MonitorsController.remove)
+router.post('/monitors/post', MonitorsController.create)
+router.get('/monitors/fetchOne/:monitor', MonitorsController.fetchOne)
+router.get('/monitors/fetchAll', MonitorsController.fetchAll)
 export default router;

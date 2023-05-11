@@ -27,8 +27,8 @@ export class RecordPageComponent implements OnInit {
     'comment': new FormControl(''),
   })
 
-  constructor(private fleetService: FleetServicesService, 
-    activatedRoute: ActivatedRoute, 
+  constructor(private fleetService: FleetServicesService,
+    activatedRoute: ActivatedRoute,
     private maintainService: MaintainanceService,
     private router: Router,
     private authService: AuthenticateService){
@@ -60,7 +60,7 @@ export class RecordPageComponent implements OnInit {
     this.maintainService.addFleetToMaintainance(this.monitorForm.value);
     console.log(this.monitorForm.value);
     this.monitorForm.reset();
-    this.router.navigateByUrl('fleets');
+    this.router.navigateByUrl(this.user.name+'/fleets');
   }
 
 }

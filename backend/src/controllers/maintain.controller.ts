@@ -58,7 +58,8 @@ export class MaintainController{
     };
 
     public static async revealWithFleet(req: Request, res: Response){
-        let fleets = await Maintain.findAll({include: Fleet}).then(fleets => {
+        let Depot = req.params.depot
+        let fleets = await Maintain.findAll({include: {model: Fleet, where: {depot: Depot}}}).then(fleets => {
            return res.json(fleets);
         }).catch(err => {
            return res.status(500).send(err.message)

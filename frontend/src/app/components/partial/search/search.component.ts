@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { AuthenticateService } from 'src/app/services/authenticate.service';
+import { User } from 'src/app/shared/user.model';
 
 @Component({
   selector: 'app-search',
@@ -9,10 +11,16 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 export class SearchComponent {
   searchTerm = '';
   @Input() page!: string;
+  user!: User;
 
-  constructor(activatedRoute: ActivatedRoute, private router: Router){
+  constructor(activatedRoute: ActivatedRoute, private router: Router, private authService: AuthenticateService){
+    this.authService.userObservable.subscribe(user => {
+      this.user = user;
+    })
     activatedRoute.params.subscribe((params) => {
-      if(params.searchTerm) this.searchTerm = this.searchTerm;
+      if(params.searchTerm){
+        this.searchTerm = this.searchTerm;
+      }
     })
   }
 
@@ -26,7 +34,7 @@ export class SearchComponent {
 
   search(term:string):void{
     if(term){
-      this.router.navigateByUrl('search/'+term);
+      this.router.navigateByUrl(this.user.name+'/search/'+term);
     }
   }
 

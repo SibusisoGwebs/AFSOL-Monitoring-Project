@@ -29,8 +29,8 @@ export class FleetServicesService {
     })
   }
 
-  fetchAllFleet(){
-    return this.http.get<Fleet[]>(FETCH_ALL_FLEET);
+  fetchAllFleet(depot: string){
+    return this.http.get<Fleet[]>(FETCH_ALL_FLEET+"/"+depot);
   }
 
   fetchOneFleet(fleetNumber: string){

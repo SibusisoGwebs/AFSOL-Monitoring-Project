@@ -51,3 +51,7 @@ export const DELETE_VIDEOFOOTAGE = BASE_URL + 'video-footage/delete';
 
 export const ADD_TECH_ON_VIDEOFOOTAGE = BASE_URL + 'technician-Video-data/post';
 export const ADD_VIDEOFOOTAGE_TO_HISTORY = BASE_URL + 'VideofootageHistory/post';
+
+export const ADD_MONITORS = BASE_URL + 'monitors/post';
+export const CLEAR_MONITORS = BASE_URL + 'monitors/delete';
+export const FETCH_ONE_MONITORS = BASE_URL + 'monitors/fetchOne';

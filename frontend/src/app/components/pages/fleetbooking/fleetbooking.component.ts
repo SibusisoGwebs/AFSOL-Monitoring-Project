@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthenticateService } from 'src/app/services/authenticate.service';
 import { FunctionsService } from 'src/app/services/functions.service';
 import { MaintainanceService } from 'src/app/services/maintainance.service';
 import { SchedulingService } from 'src/app/services/scheduling.service';
@@ -20,13 +21,15 @@ export class FleetbookingComponent implements OnInit {
     'date': new FormControl(''),
     'id': new FormControl(''),
   });
+  user!: string;
 
-  constructor(activatedRoute: ActivatedRoute, 
-    private maintainance: MaintainanceService, 
-    private scheduleService: SchedulingService, 
-    private router: Router,
+  constructor(activatedRoute: ActivatedRoute,
+    private maintainance: MaintainanceService,
+    private scheduleService: SchedulingService,
+    private authService: AuthenticateService,
     private functionService: FunctionsService){
     activatedRoute.params.subscribe((params) => {
+      this.user = params.name
       if(params.fleetNumber){
         this.maintainance.fetchOneMaintainanceFleet(params.fleetNumber).subscribe((data) => {
           this.maintainanceFleet = data;

@@ -20,8 +20,8 @@ export class MaintainanceService {
     return this.http.get<MaintainModel[]>(FETCH_ALL_MAINTAINANCE_FLEET)
   }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  fetchMaintainanceListFleet(){
-    return this.http.get<MaintainanceFleetModel[]>(FETCH_MAINTAINANCE_LIST)
+  fetchMaintainanceListFleet(depot: string){
+    return this.http.get<MaintainanceFleetModel[]>(FETCH_MAINTAINANCE_LIST+"/"+depot)
   }
 
   fetchOneMaintainanceFleet(fleet: string){

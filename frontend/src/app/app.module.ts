@@ -27,6 +27,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddUserComponent } from './components/pages/add-user/add-user.component'
 import { ShortenPipe } from './shared/Features/shorten.pipe';
+import { MonitorsComponent } from './components/pages/monitors/monitors.component';
+import { BackButtonComponent } from './components/partial/back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { ShortenPipe } from './shared/Features/shorten.pipe';
     ClosevideofootageComponent,
     PendingvideofootageComponent,
     AddUserComponent,
-    ShortenPipe
+    ShortenPipe,
+    MonitorsComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,

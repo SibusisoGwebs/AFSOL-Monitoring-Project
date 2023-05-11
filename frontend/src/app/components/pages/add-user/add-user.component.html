@@ -1,6 +1,7 @@
 <app-header></app-header>
 <section>
     <h1 class="text-center">Add User</h1>
+    <button type="button" class="butt btn mt-5 fw-semibold" routerLink="/admin/depot-management">Monitoring Management</button>
     <form class="container fw-semibold w-50" [formGroup]="UserForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
           <label for="names" class="form-label">Name</label>

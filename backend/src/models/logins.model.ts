@@ -40,4 +40,4 @@ const Login = sequelize.define('user_login', {
     }
 }, {timestamps: false});
 
-export default Login
+export default Login;

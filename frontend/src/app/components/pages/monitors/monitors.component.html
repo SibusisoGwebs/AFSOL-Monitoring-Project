@@ -1,0 +1,24 @@
+<app-header></app-header>
+<section>
+  <div class="d-flex text-center">
+    <app-back-button routerLink="/admin/add-user"></app-back-button>
+  </div>
+  <h1 class="text-center">Monitoring Management</h1>
+  <button type="button" class="butt btn mt-5 fw-semibold" (click)="onClick()">Clear Monitoring</button>
+  <form class="container fw-semibold w-50" [formGroup]="monitorForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="email_" class="form-label">Name</label>
+        <input type="email" class="form-control fw-semibold bg-transparent" formControlName="name" id="email_">
+
+        <!-- <div class="text-warning fw-bold bg-danger mt-1 rounded" *ngIf="loginForm.controls.Email.errors && isSubmitted">
+          <div class="text-warning fw-semibold" *ngIf="loginForm.controls.Email.errors.required">Should not be empty</div>
+          <div *ngIf="loginForm.controls.Email.errors.email">Email is incorrect</div>
+        </div> -->
+      </div>
+      <div class="mb-3">
+        <label for="depot" class="form-label">Depot</label>
+        <input type="text" class="form-control fw-semibold bg-transparent" formControlName="depot" id="depot">
+      </div>
+      <button type="submit" class="btn btn-success fw-semibold">Submit</button>
+    </form>
+</section>

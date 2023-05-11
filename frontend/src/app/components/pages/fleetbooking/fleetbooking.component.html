@@ -1,7 +1,10 @@
 
 <app-header></app-header>
 <section>
-    <h1 class="text-center">{{count.ValueOfCount}}</h1>
+  <div class="d-flex text-center">
+    <app-back-button routerLink="/{{user}}/fleet-maintainance-list"></app-back-button>
+  </div>
+  <h1 class="text-center">{{count.ValueOfCount}}</h1>
     <p class="text-center fs-5 fw-semibold">Ticket: {{count.ValueOfCount}}</p>
     <form class="container fw-semibold w-50" [formGroup]="scheduleForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">

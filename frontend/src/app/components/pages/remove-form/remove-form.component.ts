@@ -24,13 +24,15 @@ export class RemoveFormComponent implements OnInit {
   location!: any;
   latitude!: number;
   longitude!: number;
+  username!: string;
 
   constructor(private maintainService: MaintainanceService,
-    activatedRoute: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private techService: TechnicianService,
     private scheduleService: SchedulingService,
     private sharedService: SharedService){
-    activatedRoute.params.subscribe((params) => {
+    this.activatedRoute.params.subscribe((params) => {
+      this.username = params.name
       this.location = this.getGeolocation()
       console.log(this.location)
       this.showButton = false

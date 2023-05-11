@@ -1,7 +1,10 @@
 
 <app-header></app-header>
-<div class="container-fluid mt-5">
-    <h1 class="mt-5 mb-5 text-center">GABS Maintainance</h1>
+<div class="container-fluid">
+  <div class="d-flex text-center">
+    <app-back-button routerLink="/Video-Footage"></app-back-button>
+  </div>
+    <h1 class="mt-5 mb-5 text-center">Pending Videofootage</h1>
     <ul class="ul d-flex justify-content-center align-items-center flex-wrap">
         <li *ngFor="let video of AllVideoFootage">
             <div class="card ps-2 pb-1 pe-2">

@@ -1,5 +1,7 @@
 <app-header></app-header>
 <div class="container-fluid mt-5">
+  <div *ngIf="isMonitor, else notMonitor">
+    <h1>{{user}}: {{monitor.name}}</h1>
     <h1 class="mt-5 mb-5 text-center">GABS Maintainance</h1>
     <ul class="ul d-flex justify-content-center align-items-center flex-wrap">
         <li *ngFor="let fleeet of maintainanceFleetList">
@@ -21,11 +23,11 @@
                       <span>{{fleeet.comment}}</span>
                     </div>
                     <a class="book col d-flex flex-column fw-bold fs-3 text-center text-primary"
-                    routerLink="/booking-page/{{fleeet.fleetFleetNumber}}">
+                    routerLink="/{{user}}/booking-page/{{fleeet.fleetFleetNumber}}">
                       Book
                     </a>
                     <a class="remove col d-flex flex-column fw-bold fs-3 text-center"
-                    routerLink="/remove-page/{{fleeet.fleetFleetNumber}}">
+                    routerLink="/{{user}}/remove-page/{{fleeet.fleetFleetNumber}}">
                       Close
                     </a>
                   </div>
@@ -41,4 +43,9 @@
               </div>
         </li>
     </ul>
+  </div>
+  <ng-template #notMonitor>
+    <h1 class="messege text-center">Hello Stranger</h1>
+  </ng-template>
+
 </div>
