@@ -11,6 +11,7 @@ const sequelize: Sequelize = new Sequelize(
         timezone: '+02:00',
         host: database.host,
         dialect: 'postgres',
+        port: 5432,
         dialectOptions: {
             useUTC: true, //for reading from database
             dateStrings: true,
