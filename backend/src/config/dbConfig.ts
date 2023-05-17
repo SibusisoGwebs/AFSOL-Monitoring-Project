@@ -2,9 +2,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const database = {
-    host: process.env.HOST || 'localhost',
-    user: process.env.USER || 'root',
-    password: process.env.PASSWORD || 'Sibusiso@98',
+    host: process.env.HOST || '192.168.10.253',
+    user: process.env.USER || 'afsol_connector',
+    password: process.env.PASSWORD || 'afsol@afsol98',
     db: process.env.DB || 'monitoring_database',
     dialect: process.env.DIALECT || 'mysql',
     dialectOptions: {
