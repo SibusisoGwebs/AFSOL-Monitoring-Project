@@ -6,7 +6,7 @@ export const database = {
     user: 'afsol_connector',
     password: 'afsol@afsol98',
     db: 'monitoring_database',
-    dialect: process.env.DIALECT || 'mysql',
+    dialect: 'mysql',
     dialectOptions: {
         useUTC: false,
     },
