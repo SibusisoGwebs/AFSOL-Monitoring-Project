@@ -2,9 +2,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const database = {
-    host: '172.17.142.110',
-    user: 'afsol_users',
-    password: 'Sibusiso@#98',
+    host: 'localhost',
+    user: 'root',
+    password: 'Sibusiso@98',
     db: 'monitoring_database',
     dialect: 'mysql',
     dialectOptions: {
