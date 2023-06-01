@@ -25,7 +25,7 @@ export const database = {
 //     timezone: '+02:00'
 // }
 
-export const databa = {
+export const databass = {
     host: 'localhost',
     user: 'root',
     password: 'Sibusiso@98',
