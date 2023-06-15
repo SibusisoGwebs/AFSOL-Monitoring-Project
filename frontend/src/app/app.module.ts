@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +30,7 @@ import { AddUserComponent } from './components/pages/add-user/add-user.component
 import { ShortenPipe } from './shared/Features/shorten.pipe';
 import { MonitorsComponent } from './components/pages/monitors/monitors.component';
 import { BackButtonComponent } from './components/partial/back-button/back-button.component';
+import { HeatmapComponent } from './components/pages/heatmap/heatmap.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { BackButtonComponent } from './components/partial/back-button/back-butto
     AddUserComponent,
     ShortenPipe,
     MonitorsComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    HeatmapComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,8 @@ import { BackButtonComponent } from './components/partial/back-button/back-butto
       timeOut: 5000,
       positionClass: 'toast-bottom-right',
       newestOnTop: false
-    })
+    }),
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

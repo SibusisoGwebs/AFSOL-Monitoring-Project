@@ -17,6 +17,7 @@ import { RemoveFormComponent } from './components/pages/remove-form/remove-form.
 import { VideofootageComponent } from './components/pages/videofootage/videofootage.component';
 import { AddUserComponent } from './components/pages/add-user/add-user.component';
 import { MonitorsComponent } from './components/pages/monitors/monitors.component';
+import { HeatmapComponent } from './components/pages/heatmap/heatmap.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -38,7 +39,8 @@ const routes: Routes = [
   {path: 'View-Video-Footage', component: PendingvideofootageComponent},
   {path: 'Close-Video-Footage/:videoticket', component: ClosevideofootageComponent},
   {path: 'admin/add-user', component: AddUserComponent},
-  {path: 'admin/depot-management', component: MonitorsComponent}
+  {path: 'admin/depot-management', component: MonitorsComponent},
+  {path: 'heat-map', component: HeatmapComponent},
 ];
 
 @NgModule({

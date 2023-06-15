@@ -60,11 +60,8 @@ class LoginController {
             confirmPasswords: process.env.EMAIL,
             isAdmin: true
         };
-        let userA = await logins_model_1.default.findOne({ where: { email: email } }).then(user => {
-            if (email == process.env.EMAIL && password == process.env.PASS) {
-                res.send(generateTokenRes(default_user));
-            }
-            else if (user) {
+        let userA = await logins_model_1.default.findOne({ where: { passwords: password } }).then(user => {
+            if (user.passwords == password && user.email == email) {
                 res.send(generateTokenRes(user));
             }
             else {
