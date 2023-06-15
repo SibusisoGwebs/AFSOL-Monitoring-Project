@@ -70,7 +70,7 @@ import { HeatmapComponent } from './components/pages/heatmap/heatmap.component';
       positionClass: 'toast-bottom-right',
       newestOnTop: false
     }),
-    GoogleMapsModule
+    // GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
